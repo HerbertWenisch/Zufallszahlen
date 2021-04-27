@@ -3,7 +3,7 @@ import java.util.Random;
 public class WuerfelSimulation {
     private int N = 100;
     private Random zG;
-    private int [] zzs;
+    private int[] zzs;
     
     public WuerfelSimulation(){
         zG = new Random();
@@ -12,14 +12,14 @@ public class WuerfelSimulation {
     }
     
     // würfelt einmal:
-    private int wuerfle(){
+    private int nextWurf(){
         return zG.nextInt(6) + 1;
     }
     
     // würfelt N-mal:
     public void wuerfeln(){
         for (int i = 0; i < N; i++) 
-             zzs[i] = wuerfle();
+             zzs[i] = nextWurf();
     }    
     
     // wie oft kommt z vor?
