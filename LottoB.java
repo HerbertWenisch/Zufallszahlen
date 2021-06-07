@@ -22,13 +22,19 @@ public class LottoB {
     }
     
     public void ziehungDurchführen(){
-        // Your Code!
+        int z;
+        for (int i = 0; i < n; i++){
+           z = nextZZ();
+           while(gezogen[z]) z = nextZZ();
+           gezogen[z] = true;
+        }
     }
     
     
     public void printLottoZahlen(){
         String lottoZahlen = "";
-        // Your Code!
+        for(int i = 1; i < N; i++)
+           if(gezogen[i]) lottoZahlen += i + " ";
         System.out.println(lottoZahlen);   
     }
         

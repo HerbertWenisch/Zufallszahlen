@@ -28,7 +28,13 @@ public class LottoA {
     }
     
     public void ziehungDurchführen(){
-        // Your Code
+        int z;
+        for(int i = 0; i < N; i++){
+            z = nextZZ();
+            while (contains(z))   // bereits gezogen
+                 z = nextZZ();
+            lottozahlen[i] = z;  
+        }
     }
     
     // Bildschirmausgabe:
